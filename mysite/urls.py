@@ -24,5 +24,7 @@ urlpatterns = [
     path('date/',fa.currentplan),
     path('template/',fa.renderTemplate),
     path('design/',dg.design),
-    path('emp/',fa.employeedata)
+    path('emp/',fa.employeedata),
+
+
 ]
