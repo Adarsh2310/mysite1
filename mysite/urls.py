@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from firstapp import views as fa
 from design import views as dg
+from formapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +26,7 @@ urlpatterns = [
     path('template/',fa.renderTemplate),
     path('design/',dg.design),
     path('emp/',fa.employeedata),
+    path('usereg/',views.userRegistrationview)
 
 
 ]
