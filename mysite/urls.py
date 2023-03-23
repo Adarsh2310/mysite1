@@ -18,7 +18,7 @@ from django.urls import path
 from firstapp import views as fa
 from design import views as dg
 from formapp import views
-
+from modelform import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('plans/',fa.plan),
@@ -26,7 +26,10 @@ urlpatterns = [
     path('template/',fa.renderTemplate),
     path('design/',dg.design),
     path('emp/',fa.employeedata),
-    path('usereg/',views.userRegistrationview)
+    # path('usereg/',views.userRegistrationview),
+    path('listProjects/',views.listProjects),
+    path('addProject/',views.addproject),
+    path('',views.index)
 
 
 ]

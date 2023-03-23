@@ -17,18 +17,10 @@ class UserRegistration(forms.Form):
     # validation of the method
 
     def clean_email(self):
+        se = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
         inputemail = self.cleaned_data['email']
-        if inputemail.find('gmail')== -1:
-            raise forms.ValidationError('the email should contain gmail')
+        if re.fullmatch(se,inputemail):
+            print('valid mail')
+        else:
+            raise forms.ValidationError('invalid')
         return inputemail
-
-    # def clean_email(self):
-    #     email = self.cleaned_data['email']
-    #     validator = re.match(
-    #         "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")
-    #     validator(email)
-    #     return email
-
-
-
-
