@@ -19,17 +19,18 @@ from firstapp import views as fa
 from design import views as dg
 from formapp import views
 from modelform import views
+from fbv import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('plans/',fa.plan),
-    path('date/',fa.currentplan),
-    path('template/',fa.renderTemplate),
-    path('design/',dg.design),
+    # path('plans/',fa.plan),
+    # path('date/',fa.currentplan),
+    # path('template/',fa.renderTemplate),
+    # path('design/',dg.design),
     path('emp/',fa.employeedata),
     # path('usereg/',views.userRegistrationview),
-    path('listProjects/',views.listProjects),
-    path('addProject/',views.addproject),
-    path('',views.index)
-
+    # path('listProjects/',views.listProjects),
+    # path('addProject/',views.addproject),
+    # path('',views.index),
+    path('student/',views.getstudents)
 
 ]

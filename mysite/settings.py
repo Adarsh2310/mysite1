@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'firstapp',
     'design',
     'modelform',
+    'fbv'
 ]
 
 MIDDLEWARE = [
@@ -79,7 +80,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Project',
+        'NAME': 'newdb',
         'USER':'root',
         'PASSWORD':'root'
 
